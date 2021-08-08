@@ -2,76 +2,108 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<style>form {
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-      border: solid 1px #c2c2c2;
-      padding-bottom: 10px;
-      margin: auto;
-      background: #fafafa;
-    }
-    input[type=textfield] {
-        width: 75%;
-        padding: 16px 32px;
-        font-size: 16px;
-        margin: 8px 0;
-        border: 1px solid silver;
-        border-radius: 1px;
-        text-align: left;
-        color: #333;
-        background: #ccc;
-    }
-    input[type=button], input[type=submit], input[type=reset] {
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 16px 32px;
-        font-size: 16px;
-        min-width: 21%;
-        text-decoration: none;
-        margin: 4px 2px;
-        cursor: pointer;
-    }
-    input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
-      background-color: #333;
-    }</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
 </head>
-<!-- Empieza codigo calculadora html-->
-  <form name="calculator">
-    <p>Haz algun calculo para ver el resultado.</p>
-    <input id="ans" type="textfield" name="ans" value="">
-    <br>
-    <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
-    <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
-    <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
-    <br>
-    <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
-    <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
-    <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
-    <br>
-    <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
-    <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
-    <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
-    <br>
-    <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
-    <input type="reset" value="c">
-    <input id="calcular" type="button" value="=" >
-    </form>
-    <H1 id="result" style="background-color: grey; color: red;"></H1>
-    
-    <script>
-      document.getElementById('calcular').addEventListener("click", calcularDisparo);
-      function calcularDisparo() {
-        let distancia = document.getElementById('ans').value
-        if (distancia<1600 & distancia>100) {
-          let elevacion= -0.2370*distancia + 1001.4654
-        document.getElementById('result').innerHTML = elevacion
-        } else {
-          document.getElementById('result').innerHTML = "La distancia debe ser entre 100 y 1600 metros"
-        }
-      }
 
-    </script>
-    
-    </html>
+<body style="background: black;">
+
+
+<form name="calculator">
+    <div class="container" style="padding: 30px;border: 1px solid grey;margin-top: 50px;background: whitesmoke;    box-shadow: 5px 5px #525252;    border-radius: 10px;">
+      <div class="row">
+        <div class="col-lg-12 nopadding">
+      <img src="https://i.ibb.co/SRPjZ5m/prueba.png" class="rounded mx-auto d-block col-xs-5" alt="Responsive image">
+    </div>
+    </div>
+<h1 class="text-center" style="color: honeydew;background-color: black;">Calculadora de artilleria AFIP</h1>
+        <div class="row">
+            <div class="col-lg-12 nopadding">
+           
+            <input class="form-control" style="padding: 10px;font-size: 30px;height: 50px;" id="ans" type="textfield" name="ans" value="">
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-xs-4 nopadding">
+            <input id="one" class="btn btn-primary btn-block btn_font" type="button" value="1" onClick="document.calculator.ans.value+='1'">
+        </div>
+        <div class="col-xs-4 nopadding">
+            <input id="two" class="btn btn-primary btn-block btn_font" type="button" value="2" onClick="document.calculator.ans.value+='2'">
+            
+        </div>
+        <div class="col-xs-4 nopadding">
+            <input id="three" class="btn btn-primary btn-block btn_font" type="button" value="3" onClick="document.calculator.ans.value+='3'">
+            
+        </div>
+        
+    </div>
+        <div class="row">
+            <div class="col-xs-4 nopadding">
+                <input id="four" class="btn btn-primary btn-block btn_font" type="button" value="4" onClick="document.calculator.ans.value+='4'">
+                
+            </div>
+            <div class="col-xs-4 nopadding">
+                <input id="five" class="btn btn-primary btn-block btn_font" type="button" value="5" onClick="document.calculator.ans.value+='5'">
+                
+            </div>
+            <div class="col-xs-4 nopadding">
+                <input id="six" class="btn btn-primary btn-block btn_font" type="button" value="6" onClick="document.calculator.ans.value+='6'">
+                
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-4 nopadding">
+                <input id="seven" class="btn btn-primary btn-block btn_font" type="button" value="7" onClick="document.calculator.ans.value+='7'">
+                
+            </div>
+            <div class="col-xs-4 nopadding">
+                <input id="eight" class="btn btn-primary btn-block btn_font" type="button" value="8" onClick="document.calculator.ans.value+='8'">
+                
+            </div>
+            <div class="col-xs-4 nopadding">
+                <input id="nine" class="btn btn-primary btn-block btn_font" type="button" value="9" onClick="document.calculator.ans.value+='9'">
+                
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-4 nopadding">
+                
+                <input class="btn btn-primary btn-block btn_font" type="reset" value="c">
+            </div>
+            <div class="col-xs-4 nopadding">
+                <input id="zero" class="btn btn-primary btn-block btn_font" type="button" value="0" onClick="document.calculator.ans.value+='0'">
+  
+            </div>
+            <div class="col-xs-4 nopadding">
+                <input id="calcular" class="btn btn-primary btn-block btn_font" type="button" value="=" >
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-lg-12 nopadding">
+              <input class="form-control" style="padding: 10px;font-size: 30px;height: 50px;" id="result" type="textfield" name="result" value="">
+              
+            </div>
+        </div>
+    </div>
+  </form>
+
+
+
+<script>
+  document.getElementById('calcular').addEventListener("click", calcularDisparo);
+  function calcularDisparo() {
+    let distancia = document.getElementById('ans').value
+    if (distancia<1600 & distancia>100) {
+      let elevacion= -0.2370*distancia + 1001.4654
+    document.getElementById('result').value = elevacion
+    } else {
+      document.getElementById('result').value = "La distancia debe ser entre 100 y 1600 metros"
+    }
+  }
+
+</script>
+</body>
+</html>
